@@ -1,5 +1,5 @@
 % -----------------------------------------------------------------------------
-% Modelo de apresentação de trabalhos acadêmicos
+% Modelo de apresentação de trabalho acadêmico
 % Projeto hospedado em: https://github.com/cfgnunes/latex-slides
 %
 % Autor: Cristiano Nunes <cfgnunes@gmail.com>
