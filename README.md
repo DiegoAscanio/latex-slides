@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/cfgnunes/latex-slides.svg?branch=master)](https://travis-ci.org/cfgnunes/latex-slides)
 
-Modelo de apresentação em slides em [LaTeX](https://www.latex-project.org/).
+Modelo de apresentação em slides utilizando [LaTeX](https://www.latex-project.org/).
 
 ## Começando
 
