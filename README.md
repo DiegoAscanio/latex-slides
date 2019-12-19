@@ -4,7 +4,7 @@
 
 Modelo de apresentação em slides utilizando [LaTeX](https://www.latex-project.org/).
 
-Para um modelo de apresentação trabalhos acadêmicos, visite o projeto [latex-cefetmg](https://github.com/cfgnunes/latex-cefetmg/).
+Para um modelo de trabalho acadêmico, visite o projeto [latex-cefetmg](https://github.com/cfgnunes/latex-cefetmg/).
 
 ![exemplo](figs/figura-exemplo2.png)
 
