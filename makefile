@@ -15,10 +15,15 @@ help:
 	@echo "'make run': Gera o documento em PDF e visualiza."
 	@echo
 
+TEX_FILES = $(shell find . -type f -iname "*.tex" -or -iname "*.cls" -or -iname "*.bib")
+IMG_FILES = $(shell find . -type f -iname "*.png" -or -iname "*.jpg" -or -iname "*.eps")
+PDF_FILES = $(shell find . -type f -iname "*.pdf" ! -iname "$(SRC).pdf" ! -iname "$(SRC-COMPR).pdf")
+
 compile: $(SRC).pdf
-$(SRC).pdf: $(SRC).tex latex-slides.cls referencias.bib
+$(SRC).pdf: $(TEX_FILES) $(IMG_FILES) $(PDF_FILES)
 	@echo "Compilando arquivos..."
-	@$(LATEXMK) -pdf -synctex=1 "$(SRC).tex"
+	@$(LATEXMK) -pdf -synctex=1 $(SRC).tex
+	@touch $(SRC).pdf
 	@echo "Pronto!"
 	@echo
 
@@ -31,6 +36,7 @@ $(SRC-COMPR).pdf: $(SRC).pdf
 		-dSubsetFonts=true \
 		-sOutputFile=$(SRC-COMPR).pdf \
 		$(SRC).pdf
+	@touch $(SRC-COMPR).pdf
 	@echo "Pronto!"
 	@echo
 
