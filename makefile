@@ -4,16 +4,15 @@ LATEXMK     = latexmk
 GHOSTSCRIPT = gs
 PDFVIEWER   = evince
 
-.PHONY: all help compile compile-test compile-compact clean run
+.PHONY: default help compile compact clean run
 
-all: run
+default: run
 
 help:
-	@echo "'make all': Limpa diretório, compila e visualiza o PDF gerado."
 	@echo "'make compile': Gera o documento em PDF."
-	@echo "'make compile-compact': Gera o documento compactado em PDF."
+	@echo "'make compact': Gera o documento em PDF compactado."
 	@echo "'make clean': Remove arquivos gerados."
-	@echo "'make run': Visualiza o PDF gerado."
+	@echo "'make run': Gera o documento em PDF e visualiza."
 	@echo
 
 compile: $(SRC).pdf
@@ -23,13 +22,7 @@ $(SRC).pdf: $(SRC).tex latex-slides.cls referencias.bib
 	@echo "Pronto!"
 	@echo
 
-compile-test:
-	@echo "Compilando arquivos..."
-	@$(LATEXMK) -pdf -synctex=1 -xelatex -interaction=nonstopmode "$(SRC).tex"
-	@echo "Pronto!"
-	@echo
-
-compile-compact: $(SRC-COMPR).pdf
+compact: $(SRC-COMPR).pdf
 $(SRC-COMPR).pdf: $(SRC).pdf
 	@echo "Comprimindo o arquivo PDF..."
 	@$(GHOSTSCRIPT) -q -dNOPAUSE -dBATCH -dSAFER \
