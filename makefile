@@ -1,21 +1,23 @@
 SRC         = meu-trabalho
+SRC-COMPR   = meu-trabalho-compactado
 LATEXMK     = latexmk
 GHOSTSCRIPT = gs
 PDFVIEWER   = evince
 
-.PHONY: all help compile compile-test compress clean run
+.PHONY: all help compile compile-test compile-compact clean run
 
-all: clean compile run
+all: run
 
 help:
 	@echo "'make all': Limpa diretório, compila e visualiza o PDF gerado."
-	@echo "'make compile': Compila o código fonte."
-	@echo "'make compress': Comprime o arquivo PDF gerado."
+	@echo "'make compile': Gera o documento em PDF."
+	@echo "'make compile-compact': Gera o documento compactado em PDF."
 	@echo "'make clean': Remove arquivos gerados."
 	@echo "'make run': Visualiza o PDF gerado."
 	@echo
 
-compile:
+compile: $(SRC).pdf
+$(SRC).pdf: $(SRC).tex latex-slides.cls
 	@echo "Compilando arquivos..."
 	@$(LATEXMK) -pdf -synctex=1 "$(SRC).tex"
 	@echo "Pronto!"
@@ -27,14 +29,15 @@ compile-test:
 	@echo "Pronto!"
 	@echo
 
-compress:
+compile-compact: $(SRC-COMPR).pdf
+$(SRC-COMPR).pdf: $(SRC).pdf
 	@echo "Comprimindo o arquivo PDF..."
 	@$(GHOSTSCRIPT) -q -dNOPAUSE -dBATCH -dSAFER \
 		-sDEVICE=pdfwrite \
 		-dEmbedAllFonts=true \
 		-dSubsetFonts=true \
-		-sOutputFile="$(SRC)-compactado.pdf" \
-		"$(SRC).pdf"
+		-sOutputFile=$(SRC-COMPR).pdf \
+		$(SRC).pdf
 	@echo "Pronto!"
 	@echo
 
@@ -176,11 +179,12 @@ clean:
 		-or -iname "acs-*.bib" \
 		-or -iname "TSWLatexianTemp*" \
 		\) ! -path "./.git/*" -delete
+	@rm -rf $(SRC).pdf $(SRC-COMPR).pdf
 	@echo "Pronto!"
 	@echo
 
-run:
+run: $(SRC).pdf
 	@echo "Abrindo o arquivo PDF..."
-	@$(PDFVIEWER) "$(SRC).pdf" &
+	@$(PDFVIEWER) $(SRC).pdf &
 	@echo "Pronto!"
 	@echo
