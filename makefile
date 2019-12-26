@@ -17,7 +17,7 @@ help:
 	@echo
 
 compile: $(SRC).pdf
-$(SRC).pdf: $(SRC).tex latex-slides.cls
+$(SRC).pdf: $(SRC).tex latex-slides.cls referencias.bib
 	@echo "Compilando arquivos..."
 	@$(LATEXMK) -pdf -synctex=1 "$(SRC).tex"
 	@echo "Pronto!"
