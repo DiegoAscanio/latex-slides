@@ -1,10 +1,10 @@
-% -----------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
 % Modelo de apresentação de trabalho acadêmico
 % Projeto hospedado em: https://github.com/cfgnunes/latex-slides
 %
 % Autor: Cristiano Nunes <cfgnunes@gmail.com>
 % Data: 2019-12-18
-% -----------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
 
 \documentclass[aspectratio=34, 14pt]{latex-slides}
 
@@ -13,7 +13,7 @@
     abnt-emphasize=bf,
     bibjustif,
     recuo=0cm,
-    abnt-doi=expand,       % Expande endereço iniciado com doi: para http://dx.doi.org/
+    abnt-doi=expand,       % Expande endereço doi: para http://dx.doi.org/
     abnt-url-package=url,  % Utiliza o pacote url
     abnt-refinfo=yes,      % Utiliza o estilo bibliográfico abnt-refinfo
     abnt-etal-cite=3,
@@ -21,9 +21,9 @@
     abnt-thesis-year=final
 ]{abntex2cite}             % Configura as citações bibliográficas
 
-% -----------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
 % Pacotes utilizados
-% -----------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
 \usepackage[utf8]{inputenc}                      % Codificação do documento
 \usepackage[T1]{fontenc}                         % Seleção de código de fonte
 \usepackage[brazil]{babel}                       % Configuração de idioma
@@ -56,145 +56,146 @@
 }
 \date{01 de janeiro de 2020}
 
-% -----------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
 % Início do documento
-% -----------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
 \begin{document}
-    % Configura o espaçamento entre linhas
-    \leading{1.5em}
 
-    % Capa
-    \begin{frame}
-        \titlepage
-    \end{frame}
+% Configura o espaçamento entre linhas
+\leading{1.5em}
 
-    % Sumário
-    \begin{frame}
-        \frametitle{Sumário}
+% Capa
+\begin{frame}
+    \titlepage
+\end{frame}
 
-        \tableofcontents
-    \end{frame}
+% Sumário
+\begin{frame}
+    \frametitle{Sumário}
 
-    % Caracterização do problema
-    \section{Introdução}
-    \begin{frame}
-        \frametitle{Introdução}
+    \tableofcontents
+\end{frame}
 
-        \begin{itemize}
-            \item Inserir seu texto aqui...
-            \item Inserir seu texto aqui...
-        \end{itemize}
-    \end{frame}
+% Caracterização do problema
+\section{Introdução}
+\begin{frame}
+    \frametitle{Introdução}
 
-    \begin{frame}
-        \frametitle{Caracterização do problema}
+    \begin{itemize}
+        \item Inserir seu texto aqui...
+        \item Inserir seu texto aqui...
+    \end{itemize}
+\end{frame}
 
-        \setcounter{figure}{3}
-        \begin{figure}[!t]
-            \centering
-            \includegraphics[width=0.55\textwidth]{./figuras/figura-exemplo1}
-            \caption{Exemplo de figura.}
-            \label{fig:exemplo_figura}
-        \end{figure}
-    \end{frame}
+\begin{frame}
+    \frametitle{Caracterização do problema}
 
-    \begin{frame}
-        \frametitle{Caracterização do problema}
+    \setcounter{figure}{3}
+    \begin{figure}[!t]
+        \centering
+        \includegraphics[width=0.55\textwidth]{./figuras/figura-exemplo1}
+        \caption{Exemplo de figura.}
+        \label{fig:exemplo_figura}
+    \end{figure}
+\end{frame}
 
-        \begin{itemize}
-            \item Inserir seu texto aqui... \cite{nunes2017local}
-            \item Inserir seu texto aqui...
-        \end{itemize}
-    \end{frame}
+\begin{frame}
+    \frametitle{Caracterização do problema}
 
-    % Motivação
-    \begin{frame}
-        \frametitle{Motivação}
+    \begin{itemize}
+        \item Inserir seu texto aqui... \cite{nunes2017local}
+        \item Inserir seu texto aqui...
+    \end{itemize}
+\end{frame}
 
-        \begin{itemize}
-            \item Inserir seu texto aqui...
-            \item Inserir seu texto aqui...
-        \end{itemize}
-    \end{frame}
+% Motivação
+\begin{frame}
+    \frametitle{Motivação}
 
-    % Trabalhos Relacionados
-    \section{Trabalhos Relacionados}
-    \begin{frame}
-        \frametitle{Trabalhos Relacionados}
+    \begin{itemize}
+        \item Inserir seu texto aqui...
+        \item Inserir seu texto aqui...
+    \end{itemize}
+\end{frame}
 
-        \begin{itemize}
-            \item Inserir seu texto aqui...
-            \item Inserir seu texto aqui...
-        \end{itemize}
-    \end{frame}
+% Trabalhos Relacionados
+\section{Trabalhos Relacionados}
+\begin{frame}
+    \frametitle{Trabalhos Relacionados}
 
-    % Fundamentação Teórica
-    \section{Fundamentação Teórica}
-    \begin{frame}
-        \frametitle{Fundamentação Teórica}
+    \begin{itemize}
+        \item Inserir seu texto aqui...
+        \item Inserir seu texto aqui...
+    \end{itemize}
+\end{frame}
 
-        \begin{itemize}
-            \item Inserir seu texto aqui...
-            \item Inserir seu texto aqui...
-        \end{itemize}
-    \end{frame}
+% Fundamentação Teórica
+\section{Fundamentação Teórica}
+\begin{frame}
+    \frametitle{Fundamentação Teórica}
 
-    \begin{frame}
-        \frametitle{Métricas de avaliação}
+    \begin{itemize}
+        \item Inserir seu texto aqui...
+        \item Inserir seu texto aqui...
+    \end{itemize}
+\end{frame}
 
-        \begin{itemize}
-            \item Inserir seu texto aqui...
-            \item Inserir seu texto aqui...
-        \end{itemize}
-    \end{frame}
+\begin{frame}
+    \frametitle{Métricas de avaliação}
 
-    % Metodologia
-    \section{Metodologia}
-    \begin{frame}
-        \frametitle{Metodologia}
+    \begin{itemize}
+        \item Inserir seu texto aqui...
+        \item Inserir seu texto aqui...
+    \end{itemize}
+\end{frame}
 
-        \begin{itemize}
-            \item Inserir seu texto aqui...
-            \item Inserir seu texto aqui...
-        \end{itemize}
-    \end{frame}
+% Metodologia
+\section{Metodologia}
+\begin{frame}
+    \frametitle{Metodologia}
 
-    % Resultados
-    \section{Resultados}
-    \begin{frame}
-        \frametitle{Base de dados para avaliação}
+    \begin{itemize}
+        \item Inserir seu texto aqui...
+        \item Inserir seu texto aqui...
+    \end{itemize}
+\end{frame}
 
-        \begin{itemize}
-            \item Inserir seu texto aqui...
-            \item Inserir seu texto aqui...
-        \end{itemize}
-    \end{frame}
+% Resultados
+\section{Resultados}
+\begin{frame}
+    \frametitle{Base de dados para avaliação}
 
-    % Conclusão
-    \section{Conclusão}
-    \begin{frame}
-        \frametitle{Conclusão}
+    \begin{itemize}
+        \item Inserir seu texto aqui...
+        \item Inserir seu texto aqui...
+    \end{itemize}
+\end{frame}
 
-        \setcounter{figure}{3}
-        \begin{figure}[!t]
-            \centering
-            \includegraphics[width=0.55\textwidth]{./figuras/figura-exemplo2}
-            \caption{Outro exemplo de figura.}
-            \label{fig:outro_exemplo_figura}
-        \end{figure}
-    \end{frame}
+% Conclusão
+\section{Conclusão}
+\begin{frame}
+    \frametitle{Conclusão}
 
-    % Referências
-    \begin{frame}<presentation:0>[noframenumbering] %[allowframebreaks]
-        \frametitle{Referências}
+    \setcounter{figure}{3}
+    \begin{figure}[!t]
+        \centering
+        \includegraphics[width=0.55\textwidth]{./figuras/figura-exemplo2}
+        \caption{Outro exemplo de figura.}
+        \label{fig:outro_exemplo_figura}
+    \end{figure}
+\end{frame}
 
-        \small
-        \bibliography{./referencias}
-    \end{frame}
+% Referências
+\begin{frame}<presentation:0>[noframenumbering] %[allowframebreaks]
+    \frametitle{Referências}
 
-    % Capa
-    \begin{frame}
-        \titlepage
-    \end{frame}
+    \small
+    \bibliography{./referencias}
+\end{frame}
+
+% Capa
+\begin{frame}
+    \titlepage
+\end{frame}
 
 \end{document}

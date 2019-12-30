@@ -1,10 +1,10 @@
-% -----------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
 % Modelo de apresentação de trabalho acadêmico
 % Projeto hospedado em: https://github.com/cfgnunes/latex-slides
 %
 % Autor: Cristiano Nunes <cfgnunes@gmail.com>
 % Data: 2019-12-18
-% -----------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
 
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{latex-slides}[2019/12/19 v0.1]
@@ -15,9 +15,9 @@
 \ProcessOptions\relax
 \LoadClass{beamer}
 
-% -----------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
 % Configurações gerais
-% -----------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
 \usetheme{default}                          % Tema
 \usecolortheme{seagull}                     % Cores
 \setbeamertemplate{footline}[frame number]  % Rodapé
@@ -39,24 +39,24 @@
 \let\OLDitemize\itemize
 \renewcommand\itemize{\OLDitemize\addtolength{\itemsep}{1em}}
 
-% -----------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
 % Cores
-% -----------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
 \setbeamercolor*{palette primary}{use=structure,fg=white,bg=structure.fg}
 \setbeamercolor*{palette secondary}{use=structure,fg=white,bg=structure.fg!75}
 \setbeamercolor*{palette tertiary}{use=structure,fg=white,bg=structure.fg!50!black}
 \setbeamercolor*{palette quaternary}{fg=white,bg=black}
 
-% -----------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
 % Capa
-% -----------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
 \setbeamerfont{title}{size=\large,series=\bfseries,parent=structure}
 \setbeamerfont{author}{size=\normalsize,parent=structure}
 \setbeamerfont{date}{size=\scriptsize,parent=structure}
 
-% -----------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
 % Títulos
-% -----------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
 \setbeamercolor{frametitle}{bg=black,fg=white}
 \setbeamerfont{frametitle}{series=\bfseries,size=\LARGE}
 \setbeamertemplate{frametitle}{%
@@ -68,9 +68,9 @@
     \end{beamercolorbox}
 }
 
-% -----------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
 % Novos ambientes
-% -----------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
 \newtheorem{defn}{Defini\c c\~ao}
 \newtheorem{teo}[theorem]{Teorema}
 \newtheorem{ex}[theorem]{Exemplo}
