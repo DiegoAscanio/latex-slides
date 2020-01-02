@@ -1,6 +1,8 @@
-# LaTeX slides
+# LaTeX slides [![Build Status](https://travis-ci.org/cfgnunes/latex-slides.svg?branch=master)](https://travis-ci.org/cfgnunes/latex-slides)
 
-[![Build Status](https://travis-ci.org/cfgnunes/latex-slides.svg?branch=master)](https://travis-ci.org/cfgnunes/latex-slides)
+Se você gosta desse modelo, faça uma doação para apoiar o desenvolvedor.
+[![paypal](https://www.paypalobjects.com/pt_BR/i/btn/btn_donate_SM.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=28TY53S7HPN9S)
+[![mercadopago](https://http2.mlstatic.com/ui/navigation/4.1.4/mercadopago/logo__small.png)](https://www.mercadopago.com.br/checkout/v1/redirect?pref_id=77777663-0bd99901-1d1b-4d5d-a8d2-ae1d4eb75127)
 
 Modelo de apresentação em slides utilizando [LaTeX](https://www.latex-project.org/).
 
