@@ -11,7 +11,7 @@ default: compile
 
 help:
 	@echo "'make': Gera o documento em PDF."
-	@echo "'make clean': Limpa os arquivos gerados."
+	@echo "'make clean': Remove os arquivos gerados."
 	@echo
 
 compile: $(SRC).pdf
