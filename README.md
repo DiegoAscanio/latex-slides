@@ -41,4 +41,4 @@ Se você encontrar um problema ou quiser melhorar o código, ou até mesmo melho
 
 ## Autores
 
-- Cristiano Nunes - _Desenvolvedor_
+- Cristiano Nunes
