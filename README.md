@@ -38,7 +38,3 @@ Se você encontrar um problema ou quiser melhorar o código, ou até mesmo melho
 
 - [Abrir um problema](https://github.com/cfgnunes/latex-slides/issues/new) descrevendo o erro ou a ideia de uma funcionalidade nova;
 - Criar um fork do projeto, realizar mudanças, e submeter um pull request.
-
-## Autores
-
-- Cristiano Nunes
