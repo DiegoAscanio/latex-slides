@@ -3,7 +3,6 @@
 % Projeto hospedado em: https://github.com/cfgnunes/latex-slides
 %
 % Autor: Cristiano Nunes <cfgnunes@gmail.com>
-% Data: 2019-12-18
 % ------------------------------------------------------------------------------
 
 \NeedsTeXFormat{LaTeX2e}
