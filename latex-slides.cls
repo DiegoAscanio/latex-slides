@@ -7,7 +7,13 @@
 % ------------------------------------------------------------------------------
 
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{latex-slides}[2019/12/19 v0.1]
+\ProvidesClass{latex-slides}[2022/02/12 v0.2]
+
+% Captura a opção 'faixa_superior' para imprimir inserir a faixa de seções
+\providecommand{\flagfaixasuperior}{false}
+\DeclareOption{faixa_superior}{
+    \renewcommand{\flagfaixasuperior}{true}
+}
 
 % Repassa os parâmetros ao beamer
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{beamer}}
@@ -20,24 +26,32 @@
 % ------------------------------------------------------------------------------
 \usetheme{default}                          % Tema
 \usecolortheme{seagull}                     % Cores
-\setbeamertemplate{footline}[frame number]  % Rodapé
 \setbeamertemplate{section in toc}[square]  % Símbolos do sumário
 \setbeamertemplate{itemize items}[circle]   % Símbolos das listas de itens
 \setbeamertemplate{enumerate items}[circle] % Símbolos das listas enumeradas
 \setbeamertemplate{itemize subitem}{{\textendash}}
 \setbeamerfont{itemize/enumerate subbody}{shape=\itshape}
-\setbeamertemplate{headline}{}              % Faixa superior desativada
 \beamertemplatenavigationsymbolsempty       % Desabilita os botões de navegação
 
+% Configura lista de referências bibliográficas
+\setbeamertemplate{bibliography item}{$\bullet$ }
+
+\let\OLDthebibliography\thebibliography
+\renewcommand\thebibliography[1]{
+    \OLDthebibliography{#1}
+    \setlength{\parskip}{0pt}
+    \setlength{\itemsep}{5pt plus 0.3ex}
+}
+
 % Define margens
-\setbeamersize{text margin left=2em,text margin right=2em}
+\setbeamersize{text margin left=1cm,text margin right=1cm}
 
 % Ajusta as margens para o itemize
 \setlength{\leftmargini}{10pt}
 
 % Ajusta o espaçamento entre os itens de uma lista
 \let\OLDitemize\itemize
-\renewcommand\itemize{\OLDitemize\addtolength{\itemsep}{1em}}
+\renewcommand\itemize{\OLDitemize\addtolength{\itemsep}{1.5em}}
 
 % ------------------------------------------------------------------------------
 % Cores
@@ -55,17 +69,44 @@
 \setbeamerfont{date}{size=\scriptsize,parent=structure}
 
 % ------------------------------------------------------------------------------
+% Faixa superior
+% ------------------------------------------------------------------------------
+\setbeamertemplate{headline}{%
+    \ifthenelse{\equal{\flagfaixasuperior}{true}}{%
+        \leavevmode%
+        \hbox{%
+            \begin{beamercolorbox}[wd=\paperwidth,ht=2.5ex,dp=1.2ex]{palette quaternary}%
+                \insertsectionnavigationhorizontal{\paperwidth}{}{}%
+            \end{beamercolorbox}%
+        }
+        \vspace{-1.0pt}
+    }{}%
+}
+
+% ------------------------------------------------------------------------------
 % Títulos
 % ------------------------------------------------------------------------------
 \setbeamercolor{frametitle}{bg=black,fg=white}
 \setbeamerfont{frametitle}{series=\bfseries,size=\LARGE}
 \setbeamertemplate{frametitle}{%
     \nointerlineskip
-    \begin{beamercolorbox}[sep=0.2cm,ht=1.6em,wd=\paperwidth]{frametitle}
+    \begin{beamercolorbox}[wd=\paperwidth,ht=1.6em,sep=0.2cm]{frametitle}%
         \vbox{}\vskip-2ex%
         \strut\insertframetitle\strut
         \vskip-0.5ex%
     \end{beamercolorbox}
+}
+
+% ------------------------------------------------------------------------------
+% Rodapé
+% ------------------------------------------------------------------------------
+\setbeamercolor{footline}{fg=gray}
+\setbeamertemplate{footline}{%
+    \hfill%
+    \usebeamercolor[fg]{page number in head/foot}%
+    \usebeamerfont{page number in head/foot}%
+    \setbeamertemplate{page number in head/foot}[framenumber]%
+    \usebeamertemplate*{page number in head/foot}\kern1em\vskip1em%
 }
 
 % ------------------------------------------------------------------------------
