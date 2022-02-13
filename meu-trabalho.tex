@@ -7,6 +7,7 @@
 % ------------------------------------------------------------------------------
 
 \documentclass[aspectratio=34, 14pt]{latex-slides}
+%\documentclass[aspectratio=34, 14pt, faixa_superior]{latex-slides}
 
 \usepackage[%
     alf,
@@ -37,6 +38,10 @@
 \usepackage{leading}            % Espaçamento entre linhas
 \usepackage{ragged2e}           % Justificação do documento
 
+% ------------------------------------------------------------------------------
+% Configurações gerais
+% ------------------------------------------------------------------------------
+
 % Configura o label das figuras
 \captionsetup[figure]{labelformat=simple}
 
@@ -64,20 +69,30 @@
 % Configura o espaçamento entre linhas
 \leading{1.5em}
 
+% ------------------------------------------------------------------------------
 % Capa
+% ------------------------------------------------------------------------------
+
 \begin{frame}
     \titlepage
 \end{frame}
 
+% ------------------------------------------------------------------------------
 % Sumário
+% ------------------------------------------------------------------------------
+
 \begin{frame}
     \frametitle{Sumário}
 
     \tableofcontents
 \end{frame}
 
-% Caracterização do problema
+% ------------------------------------------------------------------------------
+% Introdução
+% ------------------------------------------------------------------------------
+
 \section{Introdução}
+
 \begin{frame}
     \frametitle{Introdução}
 
@@ -86,6 +101,10 @@
         \item Inserir seu texto aqui...
     \end{itemize}
 \end{frame}
+
+% ------------------------------------------------------------------------------
+% Caracterização do problema
+% ------------------------------------------------------------------------------
 
 \begin{frame}
     \frametitle{Caracterização do problema}
@@ -108,7 +127,10 @@
     \end{itemize}
 \end{frame}
 
+% ------------------------------------------------------------------------------
 % Motivação
+% ------------------------------------------------------------------------------
+
 \begin{frame}
     \frametitle{Motivação}
 
@@ -116,10 +138,15 @@
         \item Inserir seu texto aqui...
         \item Inserir seu texto aqui...
     \end{itemize}
+
 \end{frame}
 
+% ------------------------------------------------------------------------------
 % Trabalhos Relacionados
+% ------------------------------------------------------------------------------
+
 \section{Trabalhos Relacionados}
+
 \begin{frame}
     \frametitle{Trabalhos Relacionados}
 
@@ -129,8 +156,12 @@
     \end{itemize}
 \end{frame}
 
+% ------------------------------------------------------------------------------
 % Fundamentação Teórica
+% ------------------------------------------------------------------------------
+
 \section{Fundamentação Teórica}
+
 \begin{frame}
     \frametitle{Fundamentação Teórica}
 
@@ -149,8 +180,12 @@
     \end{itemize}
 \end{frame}
 
+% ------------------------------------------------------------------------------
 % Metodologia
+% ------------------------------------------------------------------------------
+
 \section{Metodologia}
+
 \begin{frame}
     \frametitle{Metodologia}
 
@@ -160,8 +195,12 @@
     \end{itemize}
 \end{frame}
 
+% ------------------------------------------------------------------------------
 % Resultados
+% ------------------------------------------------------------------------------
+
 \section{Resultados}
+
 \begin{frame}
     \frametitle{Base de dados para avaliação}
 
@@ -171,8 +210,12 @@
     \end{itemize}
 \end{frame}
 
+% ------------------------------------------------------------------------------
 % Conclusão
+% ------------------------------------------------------------------------------
+
 \section{Conclusão}
+
 \begin{frame}
     \frametitle{Conclusão}
 
@@ -185,15 +228,21 @@
     \end{figure}
 \end{frame}
 
+% ------------------------------------------------------------------------------
 % Referências
+% ------------------------------------------------------------------------------
+
 \begin{frame}<presentation:0>[noframenumbering] %[allowframebreaks]
     \frametitle{Referências}
 
-    \small
+    \tiny
     \bibliography{referencias.bib}
 \end{frame}
 
+% ------------------------------------------------------------------------------
 % Capa
+% ------------------------------------------------------------------------------
+
 \begin{frame}
     \titlepage
 \end{frame}
