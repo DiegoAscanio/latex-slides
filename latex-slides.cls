@@ -31,6 +31,7 @@
 \setbeamertemplate{itemize subitem}{{\textendash}}
 \setbeamerfont{itemize/enumerate subbody}{shape=\itshape}
 \beamertemplatenavigationsymbolsempty       % Desabilita os botões de navegação
+\setbeamertemplate{frametitle continuation}{}
 
 % Configura lista de referências bibliográficas
 \setbeamertemplate{bibliography item}{$\bullet$ }
