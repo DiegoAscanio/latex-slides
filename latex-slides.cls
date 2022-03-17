@@ -33,21 +33,10 @@
 \beamertemplatenavigationsymbolsempty       % Desabilita os botões de navegação
 \setbeamertemplate{frametitle continuation}{}
 
-% Configura lista de referências bibliográficas
-\setbeamertemplate{bibliography item}{$\bullet$ }
-
-\let\OLDthebibliography\thebibliography
-\renewcommand\thebibliography[1]{
-    \OLDthebibliography{#1}
-    \setlength{\parskip}{0pt}
-    \setlength{\itemsep}{5pt plus 0.3ex}
-}
-
-% Define margens
-\setbeamersize{text margin left=1cm,text margin right=1cm}
-
-% Ajusta as margens para o itemize
-\setlength{\leftmargini}{10pt}
+% Ajusta as margens de parágrafos e itemize
+\setlength{\leftmargini}{1em}
+\setlength{\leftmarginii}{1em}
+\setlength{\leftmarginiii}{1em}
 
 % Ajusta o espaçamento entre os itens de uma lista
 \let\OLDitemize\itemize
@@ -115,3 +104,30 @@
 \newtheorem{defn}{Defini\c c\~ao}
 \newtheorem{teo}[theorem]{Teorema}
 \newtheorem{ex}[theorem]{Exemplo}
+
+% -----------------------------------------------------------------------------
+% Referências
+% -----------------------------------------------------------------------------
+
+\setbeamertemplate{bibliography item}{$\bullet$ }
+
+\renewenvironment{thebibliography}[1]
+{%
+    \list{\@biblabel{\@arabic\c@enumiv}}%
+    {\settowidth\labelwidth{\beamer@biblabeltemplate{\@biblabel{#1}}}%
+        \leftmargin=0cm
+        \advance\leftmargin\labelsep
+        \itemsep=2ex%
+        \partopsep=0pt%
+        \topsep=0pt%
+        \usecounter{enumiv}%
+        \let\p@enumiv\@empty
+        \renewcommand\theenumiv{\@arabic\c@enumiv}
+        \let\makelabel\beamer@biblabeltemplate}%
+    \sloppy\raggedright
+    \clubpenalty10000
+    \@clubpenalty \clubpenalty
+    \widowpenalty10000%
+    \sfcode`\.\@m}{\def\@noitemerr
+    {\@latex@warning{Empty `thebibliography' environment}}%
+    \ifhmode\unskip\fi\endlist}
