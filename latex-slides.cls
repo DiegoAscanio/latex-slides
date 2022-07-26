@@ -2,7 +2,7 @@
 % Modelo de apresentação de trabalho acadêmico
 % Projeto hospedado em: https://github.com/cfgnunes/latex-slides
 %
-% Autor: Cristiano Nunes <cfgnunes@gmail.com>
+% Autor: Cristiano Fraga G. Nunes <cfgnunes@gmail.com>
 % -----------------------------------------------------------------------------
 
 \NeedsTeXFormat{LaTeX2e}
