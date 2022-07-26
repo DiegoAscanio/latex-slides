@@ -5,8 +5,8 @@
 % Autor: Cristiano Fraga G. Nunes <cfgnunes@gmail.com>
 % -----------------------------------------------------------------------------
 
-\documentclass[aspectratio=34, 12pt]{latex-slides}
-%\documentclass[aspectratio=34, 12pt, faixa_superior]{latex-slides}
+\documentclass[aspectratio=43, 12pt]{latex-slides}
+%\documentclass[aspectratio=43, 12pt, faixa_superior]{latex-slides}
 
 \usepackage[%
     alf,
@@ -24,33 +24,38 @@
 % -----------------------------------------------------------------------------
 % Pacotes utilizados
 % -----------------------------------------------------------------------------
-\usepackage[utf8]{inputenc}     % Codificação do documento
-\usepackage[T1]{fontenc}        % Seleção de código de fonte
-\usepackage[brazil]{babel}      % Configuração de idioma
-\usepackage[algoruled, portuguese]{algorithm2e}  % Algoritmos em português
-\usepackage{amssymb, amsmath}   % Fontes e símbolos matemáticos
-\usepackage{graphicx}           % Inclusão de gráficos
-\usepackage{multirow, array}    % Tabelas com múltiplas linhas e colunas
-\usepackage{verbatim}           % Exibir texto tal como escrito no documento
-\usepackage[scaled]{helvet}     % Usa a fonte Helvetica
-\usepackage{caption}            % Caption de objetos
-\usepackage{leading}            % Espaçamento entre linhas
-\usepackage{ragged2e}           % Justificação do documento
+\usepackage[utf8]{inputenc}         % Codificação do documento
+\usepackage[T1]{fontenc}            % Seleção de código de fonte
+\usepackage{booktabs}               % Réguas horizontais em tabelas
+\usepackage{color, colortbl}        % Uso de cores
+\usepackage{graphicx}               % Inclusão de gráficos
+\usepackage{indentfirst}            % Recua o primeiro parágrafo de cada seção
+\usepackage{microtype}              % Melhora a justificação do documento
+\usepackage{makecell}               % Tabelas com múltiplas linhas e colunas
+\usepackage{multirow, multicol}     % Layout em múltiplas linhas e colunas
+\usepackage{verbatim}               % Exibe texto tal como escrito no documento
+\usepackage{icomma}                 % Vírgulas em expressões matemáticas
+\usepackage{subeqnarray}            % Subenumeração de equações
+\usepackage{amsmath}                % Funções matemáticas
+%\usepackage[charter]{mathdesign}   % Utiliza a fonte 'Charter BT'
+%\usepackage{newtxtext, newtxmath}  % Utiliza a fonte 'Times New Roman' (clone)
+%\usepackage{palatino}              % Utiliza a fonte 'Palatino' (clone)
+%\usepackage{lmodern}               % Utiliza a fonte 'Computer Modern'
+%\usepackage{amsfonts}              % Fontes e símbolos matemáticos
+%\usepackage{latexsym}              % Mais símbolos matemáticos
+%\usepackage{xfrac}                 % Escreve frações de forma compacta
 
-% -----------------------------------------------------------------------------
-% Configurações gerais
-% -----------------------------------------------------------------------------
+\usepackage{caption, subcaption}    % Caption de objetos
+\usepackage{leading}                % Espaçamento entre linhas
 
-% Configura o label das figuras
-\captionsetup[figure]{labelformat=simple}
-
-% Para justificação global
-\renewcommand{\raggedright}{\leftskip=0pt \rightskip=0pt plus 0cm}
-
-% Redefine a fonte para uma fonte similar a Arial (fonte Helvetica)
+% Utiliza a fonte 'Arial' (clone)
+\usepackage[scaled]{helvet}
 \renewcommand*\familydefault{\sfdefault}
 
+% -----------------------------------------------------------------------------
 % Preâmbulo
+% -----------------------------------------------------------------------------
+
 \title{Título do trabalho}
 \author{Cristiano Fraga Guimarães Nunes}
 \institute[CEFET-MG]{%
@@ -59,6 +64,36 @@
     \par\vspace{1em}
 }
 \date{01 de janeiro de 2020}
+
+% -----------------------------------------------------------------------------
+% Configurações
+% -----------------------------------------------------------------------------
+
+% Define as cores utilizadas no documento
+\definecolor{blue_link}{RGB}{0,80,128}
+
+% Configuração dos links do PDF (pacote: 'hyperref')
+\makeatletter
+\hypersetup{%
+    portuguese,
+    colorlinks=true,        % true: links coloridos; false: links em caixas
+    linkcolor=black,        % Cor dos links internos
+    citecolor=black,        % Cor dos links para as citações
+    filecolor=black,        % Cor dos links para arquivos
+    urlcolor=black,         % Cor dos links de URLs
+    breaklinks=true,
+    pdftitle={\@title},
+    pdfauthor={\@author},
+    pdfsubject={},
+    pdfkeywords={}
+}
+\makeatother
+
+% Configura o label das figuras
+\captionsetup[figure]{labelformat=simple}
+
+% Para justificação global
+\renewcommand{\raggedright}{\leftskip=0pt \rightskip=0pt plus 0cm}
 
 % -----------------------------------------------------------------------------
 % Início do documento
